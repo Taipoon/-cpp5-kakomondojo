@@ -21,6 +21,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # My Apps
     'kakomon.apps.KakomonConfig',
+    'api.apps.ApiConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -28,6 +29,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # DRF
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

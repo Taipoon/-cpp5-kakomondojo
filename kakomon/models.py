@@ -21,7 +21,7 @@ class Issue(models.Model):
     title = models.TextField()
     content = models.TextField()
     lecture_number = models.IntegerField()
-    course_id = models.ForeignKey(Course,
+    course = models.ForeignKey(Course,
                                   on_delete=models.CASCADE)
 
     def __str__(self):
@@ -29,7 +29,7 @@ class Issue(models.Model):
 
 
 class SampleAnswer(models.Model):
-    issue_id = models.ForeignKey(Issue,
+    issue = models.ForeignKey(Issue,
                                  on_delete=models.CASCADE)
     text = models.TextField()
     image = models.ImageField()
