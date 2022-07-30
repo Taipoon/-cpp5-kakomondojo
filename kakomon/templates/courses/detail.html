@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>{{course.course_name}}</title>
+    <title>{{course.course_name}} - 過去問道場</title>
 
     {% load static %}
     <link rel="stylesheet" href="{% static 'courses/style.css' %}" type="text/css">
@@ -17,11 +17,8 @@
 
 {% for issue in course.issue_set.all %}
 <ul id="issues">
-    <div style="background-color: beige;">
         <h2>{{ issue.title }}</h2>
         <p>{{ issue.content }}</p>
-
-    </div>
 </ul>
 {% endfor %}
 
@@ -43,7 +40,7 @@
         <input type="number" id="lecture_number" name="lecture_number">
 
     </fieldset>
-    <button type="submit" value="create">
+    <button type="submit" value="create">作成する</button>
 </form>
 
 <a href="/">講義一覧へ戻る</a>
